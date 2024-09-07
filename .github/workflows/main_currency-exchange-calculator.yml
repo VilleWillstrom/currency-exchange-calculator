@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'currency-exchange-calculator'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/publish_output
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
