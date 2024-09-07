@@ -21,6 +21,13 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
+app.MapGet("/", () =>
+{
+    return new object(); // Returning empty object just to see asap that sites running
+})
+.WithName("DefaultRoute")
+.WithOpenApi();
+
 app.MapGet("/weatherforecast", () =>
 {
     var forecast =  Enumerable.Range(1, 5).Select(index =>
