@@ -25,13 +25,16 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output ./publish_output
+        run: dotnet publish --configuration Release --output ${{ github.workspace }}/publish_output
+
+      - name: List files in publish directory (debugging step)
+        run: dir ${{ github.workspace }}/publish_output
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ./publish_output
+          path: ${{ github.workspace }}/publish_output
 
   deploy:
     runs-on: windows-latest
@@ -39,7 +42,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -52,5 +55,5 @@ jobs:
         with:
           app-name: 'currency-exchange-calculator'
           slot-name: 'Production'
-          package: ./publish_output
+          package: ${{ github.workspace }}/publish_output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
