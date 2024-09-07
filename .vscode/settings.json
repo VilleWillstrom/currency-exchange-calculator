@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/db1bae31-39ab-44c1-a5ac-91a08cfe1eca/resourceGroups/CurrencyExchangeCalculator/providers/Microsoft.Web/sites/currency-exchange-calculator"
+}
