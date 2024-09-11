@@ -1,10 +1,14 @@
 using CurrencyConverterAPI.Interfaces;
 using CurrencyConverterAPI.Services;
 using Microsoft.OpenApi.Models;
+using DotNetEnv; // Add this for .env file support
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Lisää palvelut kontrollerille ja Swaggerille
+// Load environment variables from .env file
+Env.Load();
+
+// Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -12,12 +16,12 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "CurrencyConverterAPI", Version = "v1" });
 });
 
-// Rekisteröi ICurrencyService ja CurrencyService
+// Register ICurrencyService and CurrencyService
 builder.Services.AddHttpClient<ICurrencyService, CurrencyService>();
 
 var app = builder.Build();
 
-// Määritä reititys ja Swagger
+// Define routing and Swagger. Swagger is available only at development environment
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -30,10 +34,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-// Määritä oletusreitti palauttamaan tyhjän JSON-objektin
+// Define default route to return an empty JSON object
 app.MapGet("/", () => Results.Json(new { }));
 
-// Määritä kontrollerien reititys
+// Define routing for controllers
 app.MapControllers();
 
 app.Run();
