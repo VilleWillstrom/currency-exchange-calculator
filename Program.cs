@@ -29,5 +29,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
+// Määritä oletusreitti palauttamaan tyhjän JSON-objektin
+app.MapGet("/", () => Results.Json(new { }));
+
+// Määritä kontrollerien reititys
 app.MapControllers();
+
 app.Run();
