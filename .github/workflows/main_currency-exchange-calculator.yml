@@ -52,11 +52,6 @@ jobs:
       - name: List downloaded files (debugging step)
         run: dir .
 
-      - name: Set environment variables for deployment
-        run: |
-          echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-          # Add other environment variables as needed
-
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
@@ -65,3 +60,5 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
+        env:
+          API_KEY: ${{secrets.API_KEY}}
