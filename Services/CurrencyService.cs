@@ -1,4 +1,5 @@
 using CurrencyConverterAPI.Interfaces;
+using Microsoft.Extensions.Configuration;
 
 namespace CurrencyConverterAPI.Services
 {
@@ -7,13 +8,13 @@ namespace CurrencyConverterAPI.Services
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
 
-        // Constructor that initializes HttpClient and retrieves API key from environment variables.
-        // Throws an exception if the API key is not set in the environment variables.
-        public CurrencyService(HttpClient httpClient)
+        // Constructor that initializes HttpClient and retrieves API key from configuration.
+        // Throws an exception if the API key is not set in configuration settings.
+        public CurrencyService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _apiKey = Environment.GetEnvironmentVariable("API_KEY") 
-                      ?? throw new Exception("API_KEY environment variable is not set.");
+            _apiKey = configuration["API_KEY"] 
+                      ?? throw new Exception("API_KEY is not set in configuration.");
         }
 
         // Converts currency based on the request details.

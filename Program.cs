@@ -1,12 +1,9 @@
 using CurrencyConverterAPI.Interfaces;
 using CurrencyConverterAPI.Services;
 using Microsoft.OpenApi.Models;
-using DotNetEnv; // Add this for .env file support
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Load environment variables from .env file
-Env.Load();
 
 // Add services to the container
 builder.Services.AddControllers();
