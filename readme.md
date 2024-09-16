@@ -2,6 +2,12 @@
 
 Currency Converter API is a .NET 6 web API that allows users to convert amounts between different currencies using exchange rates fetched from an external API.
 
+A live version of the API is hosted on Azure App Services at the following URL: [currency-exchange-calculator](https://currency-exchange-calculator.azurewebsites.net/). 
+
+IYou can test the API using tools like [Insomnia](https://insomnia.rest/download) or [Postman](https://www.postman.com/downloads/). These tools allow you to easily send requests and examine responses from the API.
+
+Before testing, please review the API endpoints and their required request bodies to ensure proper usage. Those are defined at the end of this document.
+
 <br><br>
 
 ## Features
