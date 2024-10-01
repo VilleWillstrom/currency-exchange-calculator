@@ -70,10 +70,17 @@ jobs:
       - name: List all files and directories
         run: dir -Recurse
 
-      - name: Find location of .csproj
+      - name: List all files and directories
+        run: dir -Recurse
+
+      - name: Find .csproj file
         id: find_csproj
         run: |
           $projectFile = Get-ChildItem -Path . -Recurse -Filter *.csproj | Select-Object -First 1
+          if ($null -eq $projectFile) {
+              Write-Error "No .csproj file found!"
+              exit 1
+          }
           Write-Output "Project file found at: $($projectFile.FullName)"
           echo "PROJECT_FILE_PATH=$($projectFile.FullName)" >> $GITHUB_ENV
 
