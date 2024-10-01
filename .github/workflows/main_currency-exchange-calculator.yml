@@ -62,7 +62,7 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
 
       - name: List all directories and subdirectories
-        run: dir . /s
+        run: dir
 
       - name: Install dotnet-ef
         run: dotnet tool install --global dotnet-ef
