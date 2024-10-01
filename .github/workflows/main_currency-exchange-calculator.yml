@@ -64,25 +64,5 @@ jobs:
       - name: Install dotnet-ef
         run: dotnet tool install --global dotnet-ef
 
-      - name: Print current directory
-        run: pwd
-
-      - name: List all files and directories
-        run: dir -Recurse
-
-      - name: List all files and directories
-        run: dir -Recurse
-
-      - name: Find .csproj file
-        id: find_csproj
-        run: |
-          $projectFile = Get-ChildItem -Path . -Recurse -Filter *.csproj | Select-Object -First 1
-          if ($null -eq $projectFile) {
-              Write-Error "No .csproj file found!"
-              exit 1
-          }
-          Write-Output "Project file found at: $($projectFile.FullName)"
-          echo "PROJECT_FILE_PATH=$($projectFile.FullName)" >> $GITHUB_ENV
-
       - name: Run EF Migrations
-        run: dotnet ef database update --project ${{ env.PROJECT_FILE_PATH }}
+        run: dotnet ef database update --project D:\a\currency-exchange-calculator\currency-exchange-calculator\src\currency-exchange-calculator.csproj
