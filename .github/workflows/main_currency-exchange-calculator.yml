@@ -61,9 +61,12 @@ jobs:
           package: ./publish_output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
 
-      - name: List all directories and subdirectories
-        run: dir
-        
+      - name: Install dotnet-ef
+        run: dotnet tool install --global dotnet-ef
+
+      - name: Print current directory
+        run: pwd
+
       - name: Find location of .csproj
         id: find_csproj
         run: |
@@ -71,8 +74,5 @@ jobs:
           Write-Output "Project file found at: $($projectFile.FullName)"
           echo "PROJECT_FILE_PATH=$($projectFile.FullName)" >> $GITHUB_ENV
 
-      - name: Install dotnet-ef
-        run: dotnet tool install --global dotnet-ef
-        
       - name: Run EF Migrations
         run: dotnet ef database update --project ${{ env.PROJECT_FILE_PATH }}
