@@ -64,15 +64,15 @@ jobs:
       - name: List all directories and subdirectories
         run: dir
         
-      - name: Find .csproj file
+      - name: Find location of .csproj
+        id: find_csproj
         run: |
-          Get-ChildItem -Recurse -Filter *.csproj
-        shell: pwsh
-
-
+          $projectFile = Get-ChildItem -Path . -Recurse -Filter *.csproj | Select-Object -First 1
+          Write-Output "Project file found at: $($projectFile.FullName)"
+          echo "PROJECT_FILE_PATH=$($projectFile.FullName)" >> $GITHUB_ENV
 
       - name: Install dotnet-ef
         run: dotnet tool install --global dotnet-ef
         
       - name: Run EF Migrations
-        run: dotnet ef database update --project currency-exchange-calculator.csproj
+        run: dotnet ef database update --project ${{ env.PROJECT_FILE_PATH }}
