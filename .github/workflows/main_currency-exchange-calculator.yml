@@ -61,6 +61,9 @@ jobs:
           package: ./publish_output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
 
+      - name: Listaa kaikki tiedostot ja kansiot
+        run: dir /s
+
       - name: Install dotnet-ef
         run: dotnet tool install --global dotnet-ef
         
