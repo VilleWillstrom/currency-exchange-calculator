@@ -67,6 +67,9 @@ jobs:
       - name: Print current directory
         run: pwd
 
+      - name: List all files and directories
+        run: dir -Recurse
+
       - name: Find location of .csproj
         id: find_csproj
         run: |
