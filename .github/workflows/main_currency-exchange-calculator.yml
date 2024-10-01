@@ -64,8 +64,11 @@ jobs:
       - name: List all directories and subdirectories
         run: dir
         
-      - name: Find location of .csproj
-        run: dir /s *.csproj
+      - name: Find .csproj file
+        run: |
+          Get-ChildItem -Recurse -Filter *.csproj
+        shell: pwsh
+
 
 
       - name: Install dotnet-ef
