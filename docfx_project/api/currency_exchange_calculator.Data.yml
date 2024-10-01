@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Data
+  commentId: N:currency_exchange_calculator.Data
+  id: currency_exchange_calculator.Data
+  children:
+  - currency_exchange_calculator.Data.AppDbContext
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Data
+  nameWithType: currency_exchange_calculator.Data
+  fullName: currency_exchange_calculator.Data
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Data.AppDbContext
+  commentId: T:currency_exchange_calculator.Data.AppDbContext
+  parent: currency_exchange_calculator.Data
+  href: currency_exchange_calculator.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: currency_exchange_calculator.Data.AppDbContext
+- uid: currency_exchange_calculator.Data
+  commentId: N:currency_exchange_calculator.Data
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Data
+  nameWithType: currency_exchange_calculator.Data
+  fullName: currency_exchange_calculator.Data
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Data
+    name: Data
+    href: currency_exchange_calculator.Data.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Data
+    name: Data
+    href: currency_exchange_calculator.Data.html

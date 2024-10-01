@@ -7,6 +7,11 @@
 .env
 appsettings.Development.json
 
+# DocFX generated content
+docfx_project/_site/
+docfx_project/*.log
+docfx_project/*.tmp
+
 # User-specific files
 *.rsuser
 *.suo

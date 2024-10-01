@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Migrations
+  commentId: N:currency_exchange_calculator.Migrations
+  id: currency_exchange_calculator.Migrations
+  children:
+  - currency_exchange_calculator.Migrations.AddConversionRateToCurrencyConversion
+  - currency_exchange_calculator.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Migrations
+  nameWithType: currency_exchange_calculator.Migrations
+  fullName: currency_exchange_calculator.Migrations
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Migrations.InitialCreate
+  commentId: T:currency_exchange_calculator.Migrations.InitialCreate
+  href: currency_exchange_calculator.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: currency_exchange_calculator.Migrations.InitialCreate
+- uid: currency_exchange_calculator.Migrations.AddConversionRateToCurrencyConversion
+  commentId: T:currency_exchange_calculator.Migrations.AddConversionRateToCurrencyConversion
+  href: currency_exchange_calculator.Migrations.AddConversionRateToCurrencyConversion.html
+  name: AddConversionRateToCurrencyConversion
+  nameWithType: AddConversionRateToCurrencyConversion
+  fullName: currency_exchange_calculator.Migrations.AddConversionRateToCurrencyConversion

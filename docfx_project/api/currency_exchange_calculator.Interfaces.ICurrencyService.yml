@@ -1,0 +1,234 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService
+  commentId: T:currency_exchange_calculator.Interfaces.ICurrencyService
+  id: ICurrencyService
+  parent: currency_exchange_calculator.Interfaces
+  children:
+  - currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  langs:
+  - csharp
+  - vb
+  name: ICurrencyService
+  nameWithType: ICurrencyService
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService
+  type: Interface
+  source:
+    remote:
+      path: src/Interfaces/ICurrencyService.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: ICurrencyService
+    path: ../src/Interfaces/ICurrencyService.cs
+    startLine: 8
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Interfaces
+  summary: >-
+    Defines a contract for a currency conversion service.
+
+    This service provides functionality to convert one currency to another.
+  example: []
+  syntax:
+    content: public interface ICurrencyService
+    content.vb: Public Interface ICurrencyService
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  commentId: M:currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  id: ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  parent: currency_exchange_calculator.Interfaces.ICurrencyService
+  langs:
+  - csharp
+  - vb
+  name: ConvertCurrencyAsync(CurrencyConversionRequest)
+  nameWithType: ICurrencyService.ConvertCurrencyAsync(CurrencyConversionRequest)
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  type: Method
+  source:
+    remote:
+      path: src/Interfaces/ICurrencyService.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: ConvertCurrencyAsync
+    path: ../src/Interfaces/ICurrencyService.cs
+    startLine: 18
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Interfaces
+  summary: Converts an amount from one currency to another asynchronously.
+  example: []
+  syntax:
+    content: Task<CurrencyConversionResponse> ConvertCurrencyAsync(CurrencyConversionRequest request)
+    parameters:
+    - id: request
+      type: currency_exchange_calculator.Models.CurrencyConversionRequest
+      description: The request containing conversion details such as the amount and currencies.
+    return:
+      type: System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+      description: >-
+        A task that represents the asynchronous operation. 
+
+        The task result contains a <xref href="currency_exchange_calculator.Models.CurrencyConversionResponse" data-throw-if-not-resolved="false"></xref> with the conversion details.
+    content.vb: Function ConvertCurrencyAsync(request As CurrencyConversionRequest) As Task(Of CurrencyConversionResponse)
+  overload: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync*
+references:
+- uid: currency_exchange_calculator.Interfaces
+  commentId: N:currency_exchange_calculator.Interfaces
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Interfaces
+  nameWithType: currency_exchange_calculator.Interfaces
+  fullName: currency_exchange_calculator.Interfaces
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html
+- uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionResponse
+  href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  name: CurrencyConversionResponse
+  nameWithType: CurrencyConversionResponse
+  fullName: currency_exchange_calculator.Models.CurrencyConversionResponse
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync*
+  commentId: Overload:currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync
+  href: currency_exchange_calculator.Interfaces.ICurrencyService.html#currency_exchange_calculator_Interfaces_ICurrencyService_ConvertCurrencyAsync_currency_exchange_calculator_Models_CurrencyConversionRequest_
+  name: ConvertCurrencyAsync
+  nameWithType: ICurrencyService.ConvertCurrencyAsync
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionRequest
+  parent: currency_exchange_calculator.Models
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html
+  name: CurrencyConversionRequest
+  nameWithType: CurrencyConversionRequest
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest
+- uid: System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+  commentId: T:System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CurrencyConversionResponse>
+  nameWithType: Task<CurrencyConversionResponse>
+  fullName: System.Threading.Tasks.Task<currency_exchange_calculator.Models.CurrencyConversionResponse>
+  nameWithType.vb: Task(Of CurrencyConversionResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of currency_exchange_calculator.Models.CurrencyConversionResponse)
+  name.vb: Task(Of CurrencyConversionResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+    name: CurrencyConversionResponse
+    href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+    name: CurrencyConversionResponse
+    href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  - name: )
+- uid: currency_exchange_calculator.Models
+  commentId: N:currency_exchange_calculator.Models
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Models
+  nameWithType: currency_exchange_calculator.Models
+  fullName: currency_exchange_calculator.Models
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Models
+  commentId: N:currency_exchange_calculator.Models
+  id: currency_exchange_calculator.Models
+  children:
+  - currency_exchange_calculator.Models.CurrencyConversion
+  - currency_exchange_calculator.Models.CurrencyConversionNew
+  - currency_exchange_calculator.Models.CurrencyConversionRequest
+  - currency_exchange_calculator.Models.CurrencyConversionResponse
+  - currency_exchange_calculator.Models.ExchangeRateApiResponse
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Models
+  nameWithType: currency_exchange_calculator.Models
+  fullName: currency_exchange_calculator.Models
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Models.CurrencyConversion
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversion
+  parent: currency_exchange_calculator.Models
+  href: currency_exchange_calculator.Models.CurrencyConversion.html
+  name: CurrencyConversion
+  nameWithType: CurrencyConversion
+  fullName: currency_exchange_calculator.Models.CurrencyConversion
+- uid: currency_exchange_calculator.Models.CurrencyConversionNew
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionNew
+  parent: currency_exchange_calculator.Models
+  href: currency_exchange_calculator.Models.CurrencyConversionNew.html
+  name: CurrencyConversionNew
+  nameWithType: CurrencyConversionNew
+  fullName: currency_exchange_calculator.Models.CurrencyConversionNew
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionRequest
+  parent: currency_exchange_calculator.Models
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html
+  name: CurrencyConversionRequest
+  nameWithType: CurrencyConversionRequest
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest
+- uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionResponse
+  href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  name: CurrencyConversionResponse
+  nameWithType: CurrencyConversionResponse
+  fullName: currency_exchange_calculator.Models.CurrencyConversionResponse
+- uid: currency_exchange_calculator.Models.ExchangeRateApiResponse
+  commentId: T:currency_exchange_calculator.Models.ExchangeRateApiResponse
+  href: currency_exchange_calculator.Models.ExchangeRateApiResponse.html
+  name: ExchangeRateApiResponse
+  nameWithType: ExchangeRateApiResponse
+  fullName: currency_exchange_calculator.Models.ExchangeRateApiResponse
+- uid: currency_exchange_calculator.Models
+  commentId: N:currency_exchange_calculator.Models
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Models
+  nameWithType: currency_exchange_calculator.Models
+  fullName: currency_exchange_calculator.Models
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html

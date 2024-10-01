@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Controllers
+  commentId: N:currency_exchange_calculator.Controllers
+  id: currency_exchange_calculator.Controllers
+  children:
+  - currency_exchange_calculator.Controllers.CurrencyController
+  - currency_exchange_calculator.Controllers.CurrencyConversionController
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Controllers
+  nameWithType: currency_exchange_calculator.Controllers
+  fullName: currency_exchange_calculator.Controllers
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Controllers.CurrencyController
+  commentId: T:currency_exchange_calculator.Controllers.CurrencyController
+  href: currency_exchange_calculator.Controllers.CurrencyController.html
+  name: CurrencyController
+  nameWithType: CurrencyController
+  fullName: currency_exchange_calculator.Controllers.CurrencyController
+- uid: currency_exchange_calculator.Controllers.CurrencyConversionController
+  commentId: T:currency_exchange_calculator.Controllers.CurrencyConversionController
+  href: currency_exchange_calculator.Controllers.CurrencyConversionController.html
+  name: CurrencyConversionController
+  nameWithType: CurrencyConversionController
+  fullName: currency_exchange_calculator.Controllers.CurrencyConversionController

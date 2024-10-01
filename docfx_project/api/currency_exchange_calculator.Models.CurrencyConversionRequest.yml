@@ -1,0 +1,439 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionRequest
+  id: CurrencyConversionRequest
+  parent: currency_exchange_calculator.Models
+  children:
+  - currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+  - currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+  - currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+  langs:
+  - csharp
+  - vb
+  name: CurrencyConversionRequest
+  nameWithType: CurrencyConversionRequest
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest
+  type: Class
+  source:
+    remote:
+      path: src/Models/CurrencyConversionRequest.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: CurrencyConversionRequest
+    path: ../src/Models/CurrencyConversionRequest.cs
+    startLine: 6
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Models
+  summary: >-
+    Represents a request to convert a specified amount from one currency to another.
+
+    This model includes the necessary details for the currency conversion.
+  example: []
+  syntax:
+    content: public class CurrencyConversionRequest
+    content.vb: Public Class CurrencyConversionRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+  commentId: P:currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+  id: FromCurrency
+  parent: currency_exchange_calculator.Models.CurrencyConversionRequest
+  langs:
+  - csharp
+  - vb
+  name: FromCurrency
+  nameWithType: CurrencyConversionRequest.FromCurrency
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+  type: Property
+  source:
+    remote:
+      path: src/Models/CurrencyConversionRequest.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: FromCurrency
+    path: ../src/Models/CurrencyConversionRequest.cs
+    startLine: 11
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Models
+  summary: Gets or sets the currency code from which the conversion is made (e.g., "USD").
+  example: []
+  syntax:
+    content: public required string FromCurrency { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FromCurrency As String
+  overload: currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency*
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+  commentId: P:currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+  id: ToCurrency
+  parent: currency_exchange_calculator.Models.CurrencyConversionRequest
+  langs:
+  - csharp
+  - vb
+  name: ToCurrency
+  nameWithType: CurrencyConversionRequest.ToCurrency
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+  type: Property
+  source:
+    remote:
+      path: src/Models/CurrencyConversionRequest.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: ToCurrency
+    path: ../src/Models/CurrencyConversionRequest.cs
+    startLine: 16
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Models
+  summary: Gets or sets the currency code to which the conversion is made (e.g., "EUR").
+  example: []
+  syntax:
+    content: public required string ToCurrency { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ToCurrency As String
+  overload: currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency*
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+  commentId: P:currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+  id: Amount
+  parent: currency_exchange_calculator.Models.CurrencyConversionRequest
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: CurrencyConversionRequest.Amount
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+  type: Property
+  source:
+    remote:
+      path: src/Models/CurrencyConversionRequest.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: Amount
+    path: ../src/Models/CurrencyConversionRequest.cs
+    startLine: 21
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Models
+  summary: Gets or sets the amount to be converted from the source currency.
+  example: []
+  syntax:
+    content: public decimal Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Amount As Decimal
+  overload: currency_exchange_calculator.Models.CurrencyConversionRequest.Amount*
+references:
+- uid: currency_exchange_calculator.Models
+  commentId: N:currency_exchange_calculator.Models
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Models
+  nameWithType: currency_exchange_calculator.Models
+  fullName: currency_exchange_calculator.Models
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency*
+  commentId: Overload:currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html#currency_exchange_calculator_Models_CurrencyConversionRequest_FromCurrency
+  name: FromCurrency
+  nameWithType: CurrencyConversionRequest.FromCurrency
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency*
+  commentId: Overload:currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html#currency_exchange_calculator_Models_CurrencyConversionRequest_ToCurrency
+  name: ToCurrency
+  nameWithType: CurrencyConversionRequest.ToCurrency
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest.Amount*
+  commentId: Overload:currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html#currency_exchange_calculator_Models_CurrencyConversionRequest_Amount
+  name: Amount
+  nameWithType: CurrencyConversionRequest.Amount
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest.Amount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal

@@ -1,0 +1,38 @@
+### YamlMime:TableOfContent
+items:
+- uid: currency_exchange_calculator.Controllers
+  name: currency_exchange_calculator.Controllers
+  items:
+  - uid: currency_exchange_calculator.Controllers.CurrencyController
+    name: CurrencyController
+  - uid: currency_exchange_calculator.Controllers.CurrencyConversionController
+    name: CurrencyConversionController
+- uid: currency_exchange_calculator.Data
+  name: currency_exchange_calculator.Data
+  items:
+  - uid: currency_exchange_calculator.Data.AppDbContext
+    name: AppDbContext
+- uid: currency_exchange_calculator.Interfaces
+  name: currency_exchange_calculator.Interfaces
+  items:
+  - uid: currency_exchange_calculator.Interfaces.ICurrencyService
+    name: ICurrencyService
+- uid: currency_exchange_calculator.Models
+  name: currency_exchange_calculator.Models
+  items:
+  - uid: currency_exchange_calculator.Models.CurrencyConversion
+    name: CurrencyConversion
+  - uid: currency_exchange_calculator.Models.CurrencyConversionNew
+    name: CurrencyConversionNew
+  - uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+    name: CurrencyConversionRequest
+  - uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+    name: CurrencyConversionResponse
+  - uid: currency_exchange_calculator.Models.ExchangeRateApiResponse
+    name: ExchangeRateApiResponse
+- uid: currency_exchange_calculator.Services
+  name: currency_exchange_calculator.Services
+  items:
+  - uid: currency_exchange_calculator.Services.CurrencyService
+    name: CurrencyService
+memberLayout: SamePage

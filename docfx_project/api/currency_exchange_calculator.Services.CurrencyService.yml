@@ -1,0 +1,695 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Services.CurrencyService
+  commentId: T:currency_exchange_calculator.Services.CurrencyService
+  id: CurrencyService
+  parent: currency_exchange_calculator.Services
+  children:
+  - currency_exchange_calculator.Services.CurrencyService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  - currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  langs:
+  - csharp
+  - vb
+  name: CurrencyService
+  nameWithType: CurrencyService
+  fullName: currency_exchange_calculator.Services.CurrencyService
+  type: Class
+  source:
+    remote:
+      path: src/Services/CurrencyService.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: CurrencyService
+    path: ../src/Services/CurrencyService.cs
+    startLine: 10
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Services
+  summary: >-
+    Implements the ICurrencyService interface to handle currency conversion operations.
+
+    This service uses HttpClient to fetch exchange rates from an external API.
+  example: []
+  syntax:
+    content: 'public class CurrencyService : ICurrencyService'
+    content.vb: Public Class CurrencyService Implements ICurrencyService
+  inheritance:
+  - System.Object
+  implements:
+  - currency_exchange_calculator.Interfaces.ICurrencyService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: currency_exchange_calculator.Services.CurrencyService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:currency_exchange_calculator.Services.CurrencyService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: currency_exchange_calculator.Services.CurrencyService
+  langs:
+  - csharp
+  - vb
+  name: CurrencyService(HttpClient, IConfiguration)
+  nameWithType: CurrencyService.CurrencyService(HttpClient, IConfiguration)
+  fullName: currency_exchange_calculator.Services.CurrencyService.CurrencyService(System.Net.Http.HttpClient, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: src/Services/CurrencyService.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: .ctor
+    path: ../src/Services/CurrencyService.cs
+    startLine: 21
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Services
+  summary: Initializes a new instance of the <xref href="currency_exchange_calculator.Services.CurrencyService" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public CurrencyService(HttpClient httpClient, IConfiguration configuration)
+    parameters:
+    - id: httpClient
+      type: System.Net.Http.HttpClient
+      description: HttpClient used to make requests to the external API.
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: Configuration to retrieve the API key from settings.
+    content.vb: Public Sub New(httpClient As HttpClient, configuration As IConfiguration)
+  overload: currency_exchange_calculator.Services.CurrencyService.#ctor*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown when API_KEY is not set in the configuration settings.
+  nameWithType.vb: CurrencyService.New(HttpClient, IConfiguration)
+  fullName.vb: currency_exchange_calculator.Services.CurrencyService.New(System.Net.Http.HttpClient, Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: New(HttpClient, IConfiguration)
+- uid: currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  commentId: M:currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  id: ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  parent: currency_exchange_calculator.Services.CurrencyService
+  langs:
+  - csharp
+  - vb
+  name: ConvertCurrencyAsync(CurrencyConversionRequest)
+  nameWithType: CurrencyService.ConvertCurrencyAsync(CurrencyConversionRequest)
+  fullName: currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  type: Method
+  source:
+    remote:
+      path: src/Services/CurrencyService.cs
+      branch: main
+      repo: https://github.com/VilleWillstrom/currency-exchange-calculator.git
+    id: ConvertCurrencyAsync
+    path: ../src/Services/CurrencyService.cs
+    startLine: 34
+  assemblies:
+  - currency-exchange-calculator
+  namespace: currency_exchange_calculator.Services
+  summary: Converts currency based on the request details by making an HTTP request to an external API.
+  example: []
+  syntax:
+    content: public Task<CurrencyConversionResponse> ConvertCurrencyAsync(CurrencyConversionRequest request)
+    parameters:
+    - id: request
+      type: currency_exchange_calculator.Models.CurrencyConversionRequest
+      description: The currency conversion request containing the source and target currencies and the amount.
+    return:
+      type: System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+      description: A <xref href="currency_exchange_calculator.Models.CurrencyConversionResponse" data-throw-if-not-resolved="false"></xref> object with the conversion details.
+    content.vb: Public Function ConvertCurrencyAsync(request As CurrencyConversionRequest) As Task(Of CurrencyConversionResponse)
+  overload: currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if the currency conversion fails or if the target currency is not found in the API response.
+  implements:
+  - currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+references:
+- uid: currency_exchange_calculator.Services
+  commentId: N:currency_exchange_calculator.Services
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Services
+  nameWithType: currency_exchange_calculator.Services
+  fullName: currency_exchange_calculator.Services
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Services
+    name: Services
+    href: currency_exchange_calculator.Services.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Services
+    name: Services
+    href: currency_exchange_calculator.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService
+  commentId: T:currency_exchange_calculator.Interfaces.ICurrencyService
+  parent: currency_exchange_calculator.Interfaces
+  href: currency_exchange_calculator.Interfaces.ICurrencyService.html
+  name: ICurrencyService
+  nameWithType: ICurrencyService
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: currency_exchange_calculator.Interfaces
+  commentId: N:currency_exchange_calculator.Interfaces
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Interfaces
+  nameWithType: currency_exchange_calculator.Interfaces
+  fullName: currency_exchange_calculator.Interfaces
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html
+- uid: currency_exchange_calculator.Services.CurrencyService
+  commentId: T:currency_exchange_calculator.Services.CurrencyService
+  href: currency_exchange_calculator.Services.CurrencyService.html
+  name: CurrencyService
+  nameWithType: CurrencyService
+  fullName: currency_exchange_calculator.Services.CurrencyService
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: currency_exchange_calculator.Services.CurrencyService.#ctor*
+  commentId: Overload:currency_exchange_calculator.Services.CurrencyService.#ctor
+  href: currency_exchange_calculator.Services.CurrencyService.html#currency_exchange_calculator_Services_CurrencyService__ctor_System_Net_Http_HttpClient_Microsoft_Extensions_Configuration_IConfiguration_
+  name: CurrencyService
+  nameWithType: CurrencyService.CurrencyService
+  fullName: currency_exchange_calculator.Services.CurrencyService.CurrencyService
+  nameWithType.vb: CurrencyService.New
+  fullName.vb: currency_exchange_calculator.Services.CurrencyService.New
+  name.vb: New
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionResponse
+  href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  name: CurrencyConversionResponse
+  nameWithType: CurrencyConversionResponse
+  fullName: currency_exchange_calculator.Models.CurrencyConversionResponse
+- uid: currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync*
+  commentId: Overload:currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync
+  href: currency_exchange_calculator.Services.CurrencyService.html#currency_exchange_calculator_Services_CurrencyService_ConvertCurrencyAsync_currency_exchange_calculator_Models_CurrencyConversionRequest_
+  name: ConvertCurrencyAsync
+  nameWithType: CurrencyService.ConvertCurrencyAsync
+  fullName: currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  commentId: M:currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  parent: currency_exchange_calculator.Interfaces.ICurrencyService
+  href: currency_exchange_calculator.Interfaces.ICurrencyService.html#currency_exchange_calculator_Interfaces_ICurrencyService_ConvertCurrencyAsync_currency_exchange_calculator_Models_CurrencyConversionRequest_
+  name: ConvertCurrencyAsync(CurrencyConversionRequest)
+  nameWithType: ICurrencyService.ConvertCurrencyAsync(CurrencyConversionRequest)
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+  spec.csharp:
+  - uid: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+    name: ConvertCurrencyAsync
+    href: currency_exchange_calculator.Interfaces.ICurrencyService.html#currency_exchange_calculator_Interfaces_ICurrencyService_ConvertCurrencyAsync_currency_exchange_calculator_Models_CurrencyConversionRequest_
+  - name: (
+  - uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+    name: CurrencyConversionRequest
+    href: currency_exchange_calculator.Models.CurrencyConversionRequest.html
+  - name: )
+  spec.vb:
+  - uid: currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)
+    name: ConvertCurrencyAsync
+    href: currency_exchange_calculator.Interfaces.ICurrencyService.html#currency_exchange_calculator_Interfaces_ICurrencyService_ConvertCurrencyAsync_currency_exchange_calculator_Models_CurrencyConversionRequest_
+  - name: (
+  - uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+    name: CurrencyConversionRequest
+    href: currency_exchange_calculator.Models.CurrencyConversionRequest.html
+  - name: )
+- uid: currency_exchange_calculator.Models.CurrencyConversionRequest
+  commentId: T:currency_exchange_calculator.Models.CurrencyConversionRequest
+  parent: currency_exchange_calculator.Models
+  href: currency_exchange_calculator.Models.CurrencyConversionRequest.html
+  name: CurrencyConversionRequest
+  nameWithType: CurrencyConversionRequest
+  fullName: currency_exchange_calculator.Models.CurrencyConversionRequest
+- uid: System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+  commentId: T:System.Threading.Tasks.Task{currency_exchange_calculator.Models.CurrencyConversionResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CurrencyConversionResponse>
+  nameWithType: Task<CurrencyConversionResponse>
+  fullName: System.Threading.Tasks.Task<currency_exchange_calculator.Models.CurrencyConversionResponse>
+  nameWithType.vb: Task(Of CurrencyConversionResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of currency_exchange_calculator.Models.CurrencyConversionResponse)
+  name.vb: Task(Of CurrencyConversionResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+    name: CurrencyConversionResponse
+    href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: currency_exchange_calculator.Models.CurrencyConversionResponse
+    name: CurrencyConversionResponse
+    href: currency_exchange_calculator.Models.CurrencyConversionResponse.html
+  - name: )
+- uid: currency_exchange_calculator.Models
+  commentId: N:currency_exchange_calculator.Models
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Models
+  nameWithType: currency_exchange_calculator.Models
+  fullName: currency_exchange_calculator.Models
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Models
+    name: Models
+    href: currency_exchange_calculator.Models.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

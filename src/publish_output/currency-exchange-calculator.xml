@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>currency-exchange-calculator</name>
+    </assembly>
+    <members>
+        <member name="T:currency_exchange_calculator.Controllers.CurrencyController">
+            <summary>
+            This controller handles currency conversion requests.
+            It utilizes ICurrencyService to perform the currency conversion logic.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyController.#ctor(currency_exchange_calculator.Interfaces.ICurrencyService)">
+            <summary>
+            Constructor for CurrencyController. 
+            Injects ICurrencyService to handle business logic for currency conversions.
+            </summary>
+            <param name="currencyService">Service responsible for currency conversion operations.</param>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyController.ConvertCurrency(currency_exchange_calculator.Models.CurrencyConversionRequest)">
+            <summary>
+            Converts an amount from one currency to another.
+            Receives a request body that contains the conversion parameters.
+            </summary>
+            <param name="request">CurrencyConversionRequest object containing the conversion details.</param>
+            <returns>
+            Returns the result of the currency conversion or a corresponding error message.
+            - 200 OK: Returns the converted amount and rate.
+            - 400 BadRequest: If the input model is invalid.
+            - 500 InternalServerError: If an unexpected error occurs during processing.
+            </returns>
+        </member>
+        <member name="T:currency_exchange_calculator.Controllers.CurrencyConversionController">
+            <summary>
+            The controller responsible for handling currency conversion operations.
+            It provides CRUD operations for currency conversions.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyConversionController.#ctor(currency_exchange_calculator.Data.AppDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:currency_exchange_calculator.Controllers.CurrencyConversionController"/> class.
+            Injects the application database context to interact with the database.
+            </summary>
+            <param name="context">The application database context.</param>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyConversionController.GetConversion(System.Int32)">
+            <summary>
+            Retrieves a specific currency conversion record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the currency conversion record.</param>
+            <returns>
+            The currency conversion record if found, otherwise a 404 NotFound response.
+            - 200 OK: If the conversion record is found.
+            - 404 NotFound: If the conversion record does not exist.
+            </returns>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyConversionController.CreateConversion(currency_exchange_calculator.Models.CurrencyConversionNew)">
+            <summary>
+            Creates a new currency conversion record.
+            </summary>
+            <param name="request">The request object containing the currency conversion details.</param>
+            <returns>
+            A newly created currency conversion record.
+            - 201 Created: If the conversion record is successfully created.
+            - 400 BadRequest: If the input data is invalid.
+            </returns>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyConversionController.UpdateConversion(System.Int32,currency_exchange_calculator.Models.CurrencyConversion)">
+            <summary>
+            Updates an existing currency conversion record.
+            </summary>
+            <param name="id">The unique identifier of the currency conversion record to be updated.</param>
+            <param name="conversion">The updated currency conversion object.</param>
+            <returns>
+            A 204 NoContent response if the update is successful.
+            - 204 NoContent: If the update is successful.
+            - 400 BadRequest: If the input data is invalid or IDs don't match.
+            </returns>
+        </member>
+        <member name="M:currency_exchange_calculator.Controllers.CurrencyConversionController.DeleteConversion(System.Int32)">
+            <summary>
+            Deletes a currency conversion record by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the currency conversion record to delete.</param>
+            <returns>
+            A 204 NoContent response if the deletion is successful.
+            - 204 NoContent: If the deletion is successful.
+            - 404 NotFound: If the record to delete is not found.
+            </returns>
+        </member>
+        <member name="T:currency_exchange_calculator.Data.AppDbContext">
+            <summary>
+            Represents the application's database context.
+            It is responsible for interacting with the database and managing the currency conversion records.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Data.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{currency_exchange_calculator.Data.AppDbContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:currency_exchange_calculator.Data.AppDbContext"/> class with specified options.
+            </summary>
+            <param name="options">The options to configure the database context.</param>
+        </member>
+        <member name="P:currency_exchange_calculator.Data.AppDbContext.CurrencyConversions">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/> for the currency conversions.
+            This represents the table in the database for storing currency conversion records.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Data.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configures the model for the database when it's being created.
+            You can define database schema and relationships here if needed.
+            </summary>
+            <param name="modelBuilder">The model builder used to configure the database schema.</param>
+        </member>
+        <member name="T:currency_exchange_calculator.Interfaces.ICurrencyService">
+            <summary>
+            Defines a contract for a currency conversion service.
+            This service provides functionality to convert one currency to another.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Interfaces.ICurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)">
+            <summary>
+            Converts an amount from one currency to another asynchronously.
+            </summary>
+            <param name="request">The request containing conversion details such as the amount and currencies.</param>
+            <returns>
+            A task that represents the asynchronous operation. 
+            The task result contains a <see cref="T:currency_exchange_calculator.Models.CurrencyConversionResponse"/> with the conversion details.
+            </returns>
+        </member>
+        <member name="T:currency_exchange_calculator.Models.CurrencyConversion">
+            <summary>
+            Represents a currency conversion between two currencies.
+            Includes details such as the conversion rate, amounts, and the date of the conversion.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.Id">
+            <summary>
+            Gets or sets the unique identifier for the currency conversion.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.FromCurrency">
+            <summary>
+            Gets or sets the currency code from which the conversion is made (e.g., "USD").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.ToCurrency">
+            <summary>
+            Gets or sets the currency code to which the conversion is made (e.g., "EUR").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.Amount">
+            <summary>
+            Gets or sets the amount of the original currency to be converted.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.ConvertedAmount">
+            <summary>
+            Gets or sets the converted amount in the target currency.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.ExchangeRate">
+            <summary>
+            Gets or sets the exchange rate used for the conversion.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversion.ConversionDate">
+            <summary>
+            Gets or sets the date and time when the conversion was performed.
+            </summary>
+        </member>
+        <member name="T:currency_exchange_calculator.Models.CurrencyConversionNew">
+            <summary>
+            Represents a request to create a new currency conversion.
+            This model includes the necessary data for converting from one currency to another.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionNew.FromCurrency">
+            <summary>
+            Gets or sets the currency code from which the conversion is made (e.g., "USD").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionNew.ToCurrency">
+            <summary>
+            Gets or sets the currency code to which the conversion is made (e.g., "EUR").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionNew.Amount">
+            <summary>
+            Gets or sets the amount of the original currency to be converted.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionNew.ConvertedAmount">
+            <summary>
+            Gets or sets the converted amount in the target currency.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionNew.ExchangeRate">
+            <summary>
+            Gets or sets the exchange rate used for the conversion.
+            </summary>
+        </member>
+        <member name="T:currency_exchange_calculator.Models.CurrencyConversionRequest">
+            <summary>
+            Represents a request to convert a specified amount from one currency to another.
+            This model includes the necessary details for the currency conversion.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionRequest.FromCurrency">
+            <summary>
+            Gets or sets the currency code from which the conversion is made (e.g., "USD").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionRequest.ToCurrency">
+            <summary>
+            Gets or sets the currency code to which the conversion is made (e.g., "EUR").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionRequest.Amount">
+            <summary>
+            Gets or sets the amount to be converted from the source currency.
+            </summary>
+        </member>
+        <member name="T:currency_exchange_calculator.Models.CurrencyConversionResponse">
+            <summary>
+            Represents the response of a currency conversion operation.
+            This model includes details about the conversion result.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionResponse.FromCurrency">
+            <summary>
+            Gets or sets the currency code from which the conversion was made (e.g., "USD").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionResponse.ToCurrency">
+            <summary>
+            Gets or sets the currency code to which the conversion was made (e.g., "EUR").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionResponse.Amount">
+            <summary>
+            Gets or sets the amount that was converted from the source currency.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionResponse.ConvertedAmount">
+            <summary>
+            Gets or sets the result of the conversion in the target currency.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.CurrencyConversionResponse.ExchangeRate">
+            <summary>
+            Gets or sets the exchange rate used for the conversion.
+            </summary>
+        </member>
+        <member name="T:currency_exchange_calculator.Models.ExchangeRateApiResponse">
+            <summary>
+            Represents the response from an exchange rate API.
+            This model includes the base currency and the exchange rates for various target currencies.
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.ExchangeRateApiResponse.Base">
+            <summary>
+            Gets or sets the base currency code used for the exchange rates (e.g., "USD").
+            </summary>
+        </member>
+        <member name="P:currency_exchange_calculator.Models.ExchangeRateApiResponse.Rates">
+            <summary>
+            Gets or sets the dictionary of exchange rates where the key is the target currency code
+            and the value is the exchange rate relative to the base currency.
+            </summary>
+        </member>
+        <member name="T:currency_exchange_calculator.Services.CurrencyService">
+            <summary>
+            Implements the ICurrencyService interface to handle currency conversion operations.
+            This service uses HttpClient to fetch exchange rates from an external API.
+            </summary>
+        </member>
+        <member name="M:currency_exchange_calculator.Services.CurrencyService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:currency_exchange_calculator.Services.CurrencyService"/> class.
+            </summary>
+            <param name="httpClient">HttpClient used to make requests to the external API.</param>
+            <param name="configuration">Configuration to retrieve the API key from settings.</param>
+            <exception cref="T:System.Exception">Thrown when API_KEY is not set in the configuration settings.</exception>
+        </member>
+        <member name="M:currency_exchange_calculator.Services.CurrencyService.ConvertCurrencyAsync(currency_exchange_calculator.Models.CurrencyConversionRequest)">
+            <summary>
+            Converts currency based on the request details by making an HTTP request to an external API.
+            </summary>
+            <param name="request">The currency conversion request containing the source and target currencies and the amount.</param>
+            <returns>A <see cref="T:currency_exchange_calculator.Models.CurrencyConversionResponse"/> object with the conversion details.</returns>
+            <exception cref="T:System.Exception">Thrown if the currency conversion fails or if the target currency is not found in the API response.</exception>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Interfaces
+  commentId: N:currency_exchange_calculator.Interfaces
+  id: currency_exchange_calculator.Interfaces
+  children:
+  - currency_exchange_calculator.Interfaces.ICurrencyService
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Interfaces
+  nameWithType: currency_exchange_calculator.Interfaces
+  fullName: currency_exchange_calculator.Interfaces
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Interfaces.ICurrencyService
+  commentId: T:currency_exchange_calculator.Interfaces.ICurrencyService
+  parent: currency_exchange_calculator.Interfaces
+  href: currency_exchange_calculator.Interfaces.ICurrencyService.html
+  name: ICurrencyService
+  nameWithType: ICurrencyService
+  fullName: currency_exchange_calculator.Interfaces.ICurrencyService
+- uid: currency_exchange_calculator.Interfaces
+  commentId: N:currency_exchange_calculator.Interfaces
+  href: currency_exchange_calculator.html
+  name: currency_exchange_calculator.Interfaces
+  nameWithType: currency_exchange_calculator.Interfaces
+  fullName: currency_exchange_calculator.Interfaces
+  spec.csharp:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html
+  spec.vb:
+  - uid: currency_exchange_calculator
+    name: currency_exchange_calculator
+    href: currency_exchange_calculator.html
+  - name: .
+  - uid: currency_exchange_calculator.Interfaces
+    name: Interfaces
+    href: currency_exchange_calculator.Interfaces.html

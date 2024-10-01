@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: currency_exchange_calculator.Services
+  commentId: N:currency_exchange_calculator.Services
+  id: currency_exchange_calculator.Services
+  children:
+  - currency_exchange_calculator.Services.CurrencyService
+  langs:
+  - csharp
+  - vb
+  name: currency_exchange_calculator.Services
+  nameWithType: currency_exchange_calculator.Services
+  fullName: currency_exchange_calculator.Services
+  type: Namespace
+  assemblies:
+  - currency-exchange-calculator
+references:
+- uid: currency_exchange_calculator.Services.CurrencyService
+  commentId: T:currency_exchange_calculator.Services.CurrencyService
+  href: currency_exchange_calculator.Services.CurrencyService.html
+  name: CurrencyService
+  nameWithType: CurrencyService
+  fullName: currency_exchange_calculator.Services.CurrencyService

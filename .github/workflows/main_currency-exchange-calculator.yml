@@ -19,13 +19,13 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore src
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build src --configuration Release
 
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output ./publish_output
+        run: dotnet publish src --configuration Release --output ./publish_output
 
       - name: List files in publish directory (debugging step)
         run: dir ./publish_output
@@ -58,7 +58,8 @@ jobs:
         with:
           app-name: 'currency-exchange-calculator'
           slot-name: 'Production'
-          package: .
+          package: ./publish_output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
-        env:
-          API_KEY: ${{secrets.API_KEY}}
+
+      - name: Run EF Migrations
+        run: dotnet ef database update --project src/currency-exchange-calculator.csproj
