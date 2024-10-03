@@ -5,36 +5,28 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
-Console.WriteLine("Current Directory: " + Directory.GetCurrentDirectory());
-
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
-Console.WriteLine($"Environment: {environment}");
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Tulosta kaikki konfiguraation arvot
-Console.WriteLine("Configuration values:");
-foreach (var kvp in builder.Configuration.AsEnumerable())
-{
-    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-}
-
-// Testaa konfiguraation lukemista
-Console.WriteLine($"MYSQLCONNSTR_localdb: {builder.Configuration.GetConnectionString("MYSQLCONNSTR_localdb")}");
 
 // Configure services
 builder.Services.AddHttpClient<ICurrencyService, CurrencyService>();
 
-// Retrieve the connection string for MySQL from configuration and throw an exception if it is not set
+// Retrieve the connection string for MySQL from configuration
 var dbConnectionString = builder.Configuration.GetConnectionString("MYSQLCONNSTR_localdb");
-if (string.IsNullOrEmpty(dbConnectionString))
-{
-    throw new InvalidOperationException("The connection string 'MYSQLCONNSTR_localdb' is not configured.");
-}
 
-// Register AppDbContext with MySQL database
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(dbConnectionString, ServerVersion.AutoDetect(dbConnectionString)));
+// Check if the connection string is set, and only register AppDbContext if it is
+if (!string.IsNullOrEmpty(dbConnectionString))
+{
+    // Register AppDbContext with MySQL database
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseMySql(dbConnectionString, ServerVersion.AutoDetect(dbConnectionString)));
+}
+else
+{
+    // Optionally log a warning or set a flag to indicate the database is not available
+    Console.WriteLine("Warning: The connection string 'MYSQLCONNSTR_localdb' is not configured. Database functionality will be disabled.");
+}
 
 // Configure controllers, Swagger documentation, and XML comments
 builder.Services.AddControllers();
