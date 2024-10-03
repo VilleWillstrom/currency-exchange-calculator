@@ -25,7 +25,7 @@ jobs:
         run: dotnet build src --configuration Release
 
       - name: Publish with dotnet
-        run: dotnet publish src --configuration Release --output ./publish_output
+        run: dotnet publish src --configuration Release --output ./publish_output --self-contained true --runtime win-x64
 
       - name: List files in publish directory (debugging step)
         run: dir ./publish_output
