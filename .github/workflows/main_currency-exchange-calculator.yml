@@ -60,9 +60,3 @@ jobs:
           slot-name: 'Production'
           package: ./publish_output
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_60561F730F2B4B5A81CE43BDFD5CC879 }}
-
-      - name: Install dotnet-ef
-        run: dotnet tool install --global dotnet-ef
-
-      - name: Run EF Migrations
-        run: dotnet ef database update --project ./src/currency-exchange-calculator.csproj
